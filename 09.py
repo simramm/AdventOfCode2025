@@ -1,5 +1,4 @@
-from shapely import Polygon,box
-
+from shapely import Polygon,box 
 with open(__file__[-5:-3]+'.in') as f: data = f.read()
 #with open(__file__[-5:-3]+'-test.in') as f: data = f.read()
 
@@ -15,7 +14,7 @@ for a,b in lines:
         if (a,b) == (c,d) or a == c or b == d:
             continue  
         rect = box(a,b,c,d)        
-        if polygon.contains(rect):
+        if polygon.contains(rect): # almost feels like cheating
             ans2 = max(ans2, (abs(a-c)+1) * (abs(b-d)+1))
 
 print(ans1)
