@@ -6,7 +6,6 @@ graph ={}
 for l in lines:
     k,v = l.split(": ")
     graph[k] = v.split(" ")
-print(graph)
 
 def findPaths(g, start, end):
     memo = {}
